@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON!</title>
+    <script src="./js/mokepon.js"></script>
+    <link rel="stylesheet" href="./style.css"></link>
+</head>
+<body>
+    <section id="pet-selection">
+        <h1 class="title">MOKEPON</h1>
+        <h2 class="subtitle">Elige tu mascota:</h2>
+        <div id="pet-selection-division">
+            <div  class="pet-card">
+                <input type='radio' name='pet' id='hipodoge' />
+                <label class="pet-label" id="hipodoge-label" for='hipodoge'>
+                    <p>Hipodoge</p>
+                    <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="hipodoge">
+                </label>
+            </div>
+
+            <div class="pet-card">
+                <input type='radio' name='pet' id ='capipepo' />
+                <label class="pet-label" id="capipepo-label" for='capipepo'>
+                    <p>Capipepo</p>
+                    <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="capipepo">
+                </label>
+            </div>
+
+            <div  class="pet-card">
+                <input type='radio' name='pet' id='ratigueya' />
+                <label class="pet-label" id="ratigueya-label" for='ratigueya'>
+                    <p>Ratigueya</p>
+                    <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="ratigueya">
+                </label>
+            </div>
+        </div>
+
+        <button id="pet-selection-button"><b>SELECCIONAR</b></button>
+        <!-- Hipodoge -> Agua
+        Capipepo -> Tierra
+        Ratigueya -> Fuego
+        Langostelvis -> Agua y fuego
+        Tucapalma -> Agua y Tierra
+        Pydos -> Tierra y Fuego -->
+    </section>
+
+    <section id='attack-selection'>
+        <h1 class="title">MOKEPON</h1>
+        <h2 class="subtitle">Elige tu ataque:</h2>
+
+        <div id="attacks">
+            <button id="fire-attack-button" class="attack-button">Fire 🔥</button>
+            <button id="water-attack-button" class="attack-button">Water 💧</button>
+            <button id="earth-attack-button" class="attack-button">Earth 🌱</button>
+        </div>
+
+        <div id="game-state">
+            <section id='messages'>
+                <p id="result">Esperando ataque...</p>
+            </section>
+
+            <section id="restart-section">
+                <button id="restart-button">Reiniciar</button>
+            </section>
+        </div>
+
+        <div>
+            <div id="player-attack"></div>
+            <div id="enemy-attack"></div>
+            <p>Tu mascota <b><span id="selected-pet"></span></b> tiene <b><span id="players-health"></span></b> vidas</p>
+            <p>La mascota <b><span id="enemy-pet"></span></b> enemiga tiene <b><span id="enemy-health"></span></b> vidas</p>
+        </div>
+    </section>
+</body>
+</html>

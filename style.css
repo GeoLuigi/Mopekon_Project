@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&family=Rubik+Pixels&family=Tektur&display=swap');
+
+body {
+    color: white;
+    background-color: #3C486B;
+    font-family: 'Tektur', cursive;
+}
+
+.title {
+    background-color: transparent;
+    margin-top: 0px;
+    font-family: 'Rubik Pixels', cursive;
+    font-size: 50px;
+}
+
+.subtitle {
+    background-color: transparent;
+    margin-top: 3px;
+}
+
+#pet-selection input{
+    display: none;
+}
+
+#pet-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#pet-selection-division {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pet-card {
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 5px;
+    height: 110px;
+    width: 150px;
+    box-sizing: border-box;
+    background-color: #F9D949;
+    margin: 13px;
+
+    border: solid;
+    border-radius: 10px;
+    border-color: #F0F0F0;
+    box-shadow: 0px 0px 10px -1px yellowgreen;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    transition: transform 0.4s ease;
+}
+
+.pet-card img {
+    width: 75px;
+    margin: 0px;
+}
+
+.pet-card p {
+    margin: 0px;
+}
+
+.pet-card:hover{
+    color: white;
+    transform: scale(1.1);
+}
+
+.pet-card input:checked + label, .pet-card:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+#pet-selection-button{
+    color: #2B2730;
+    height: 36px;
+    width: 140px;
+    margin-top: 5px;
+    background-color: #F45050;
+    border-radius: 24px;
+    border: solid;
+    border-color: white;
+    box-shadow: 0px 3px 10px 0px black;
+
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    transition: transform 0.1s ease;
+}
+
+#pet-selection-button:hover {
+    color: aqua;
+    border-color: black;
+}
+
+#pet-selection-button:active {
+    color: aqua;
+    border-color: black;
+    transform: scale(0.9);
+}
+
+#attack-selection{
+    flex-direction: column;
+    align-items: center;
+}
+
+.attack-button {
+    color: black;
+    border: 2px solid black;
+    background-color: #F0F0F0;
+    border-radius: 15px;
+    height: 40px;
+    width: 90px;
+
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    transition: transform 0.1s ease;
+}
+
+.attack-button:active {
+    transform: scale(0.9);
+}
+
+.attack-button:disabled {
+    color: white;
+    background-color: #2B2730;
+    cursor: not-allowed;
+}
+
+.attack-button:disabled:hover{
+    color: white;
+    background-color: #2B2730;
+    cursor: not-allowed;
+}
+
+#fire-attack-button:hover {
+    color: white;
+    background-color: #f44336;
+}
+
+#water-attack-button:hover {
+    color: white;
+    background-color: #008CBA;
+}
+
+#earth-attack-button:hover {
+    color: white;
+    background-color: #4CAF50;
+}
+
+#fire-attack-button:disabled:hover {
+    color: white;
+    background-color: #2B2730;
+}
+
+#water-attack-button:disabled:hover {
+    color: white;
+    background-color: #2B2730;
+}
+
+#earth-attack-button:disabled:hover {
+    color: white;
+    background-color: #2B2730;
+}
+
+.attack-button:disabled:active {
+    transform: scale(1);
+}
+
+#game-state {
+    color: white;
+    display: flex;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #2B2730;
+    width: 350px;
+    margin-top: 10px;
+    border-radius: 25px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#restart-button {
+    color: black;
+    height: 28px;
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    background-color: #F0F0F0;
+    border-radius: 24px;
+    border: solid;
+    border-color: white;
+    box-shadow: 0px 3px 10px 0px black;
+
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    transition: transform 0.1s ease;
+}
+
+#restart-button:hover {
+    color: white;
+    background-color: transparent;
+}
+
+#restart-button:active {
+    color: white;
+    background-color: transparent;
+    transform: scale(0.9);
+}
