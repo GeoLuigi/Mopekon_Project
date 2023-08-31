@@ -27,9 +27,9 @@ function enemyPetSelection() {
 }
 function enemyPetAttack() {
     var choices = {
-        1: 'fuego',
-        2: 'agua',
-        3: 'tierra'
+        1: '🔥',
+        2: '💧',
+        3: '🌱'
     };
 
     let numberChoice = Math.floor(Math.random() * (3) + 1);
@@ -48,9 +48,9 @@ function battleResult() {
         document.getElementById("enemy-health").innerHTML = enemyHealth
         return 'EMPATE ⛔';
     } else if (
-                (playersAttack == 'fuego' && enemyAttack == "tierra") ||
-                (playersAttack == "tierra" && enemyAttack == "agua") ||
-                (playersAttack == "agua" && enemyAttack == "fuego")){
+                (playersAttack == '🔥' && enemyAttack == "🌱") ||
+                (playersAttack == "🌱" && enemyAttack == "💧") ||
+                (playersAttack == "💧" && enemyAttack == "🔥")){
 
         enemyHealth -= 1;
         document.getElementById("players-health").innerHTML = playerHealth;
@@ -76,8 +76,8 @@ function messageCreator() {
     newPlayerAttack.innerHTML = playersAttack;
     newEnemyAttack.innerHTML = enemyAttack;
 
-    playersAttackSection.appendChild(newEnemyAttack);
-    enemyAttackSection.appendChild(newPlayerAttack);
+    playersAttackSection.appendChild(newPlayerAttack);
+    enemyAttackSection.appendChild(newEnemyAttack);
 }
 function gameOver() {
     let restartSection = document.getElementById("restart-section");
@@ -133,17 +133,17 @@ function starGame() {
     });
 
     fireAttackButton.addEventListener("click", function(){
-        playersAttack = 'fuego';
+        playersAttack = '🔥';
         attackButtonAction();
     });
 
     waterAttackButton.addEventListener("click", function(){
-        playersAttack = 'agua';
+        playersAttack = '💧';
         attackButtonAction();
     });
 
     earthAttackButton.addEventListener("click", function(){
-        playersAttack = 'tierra';
+        playersAttack = '🌱';
         attackButtonAction();
     });
 

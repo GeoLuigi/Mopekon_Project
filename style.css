@@ -48,6 +48,7 @@ body {
     box-sizing: border-box;
     background-color: #F9D949;
     margin: 13px;
+    cursor: pointer;
 
     border: solid;
     border-radius: 10px;
@@ -61,6 +62,7 @@ body {
 .pet-card img {
     width: 75px;
     margin: 0px;
+    cursor: pointer;
 }
 
 .pet-card p {
@@ -87,6 +89,7 @@ body {
     border: solid;
     border-color: white;
     box-shadow: 0px 3px 10px 0px black;
+    cursor: pointer;
 
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -116,6 +119,7 @@ body {
     border-radius: 15px;
     height: 40px;
     width: 90px;
+    cursor: pointer;
 
     -webkit-transition-duration: 0.1s;
     transition-duration: 0.1s;
@@ -136,6 +140,19 @@ body {
     color: white;
     background-color: #2B2730;
     cursor: not-allowed;
+}
+
+.attack-section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 120px 20px 120px; /* Agregamos un espacio de 10px entre las columnas */
+    text-align: center;
+    align-items: center;
+}
+
+.info-box {
+    border: solid 1px #F0F0F0;
+    border-radius: 5px;
 }
 
 #fire-attack-button:hover {
@@ -196,6 +213,7 @@ body {
     border: solid;
     border-color: white;
     box-shadow: 0px 3px 10px 0px black;
+    cursor: pointer;
 
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -211,4 +229,17 @@ body {
     color: white;
     background-color: transparent;
     transform: scale(0.9);
+}
+
+@media (max-width: 360px) {
+    #pet-selection-division {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #attacks {
+        display: flex;
+        flex-direction: column;
+    }
 }

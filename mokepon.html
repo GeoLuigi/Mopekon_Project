@@ -39,12 +39,6 @@
         </div>
 
         <button id="pet-selection-button"><b>SELECCIONAR</b></button>
-        <!-- Hipodoge -> Agua
-        Capipepo -> Tierra
-        Ratigueya -> Fuego
-        Langostelvis -> Agua y fuego
-        Tucapalma -> Agua y Tierra
-        Pydos -> Tierra y Fuego -->
     </section>
 
     <section id='attack-selection'>
@@ -67,11 +61,22 @@
             </section>
         </div>
 
-        <div>
-            <div id="player-attack"></div>
-            <div id="enemy-attack"></div>
-            <p>Tu mascota <b><span id="selected-pet"></span></b> tiene <b><span id="players-health"></span></b> vidas</p>
-            <p>La mascota <b><span id="enemy-pet"></span></b> enemiga tiene <b><span id="enemy-health"></span></b> vidas</p>
+        <div class="attack-section">
+            <div class="info-box">
+                <b><p id="players-health"></p></b>
+                <b><p id="selected-pet"></p></b>
+                <div id="player-attack"></div>
+            </div>
+
+            <div>
+
+            </div>
+
+            <div class="info-box">
+                <b><p id="enemy-health"></p></b>
+                <b><p id="enemy-pet"></p></b>
+                <div id="enemy-attack"></div>
+            </div>
         </div>
     </section>
 </body>
