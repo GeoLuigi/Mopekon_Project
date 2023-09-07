@@ -1,3 +1,19 @@
+// Html Elements - sections
+const petSelectionSection = document.getElementById("pet-selection");
+const attackSelectionSection = document.getElementById("attack-selection");
+const resultSection = document.getElementById('result');
+const playersAttackSection = document.getElementById('player-attack');
+const enemyAttackSection = document.getElementById('enemy-attack');
+const restartSection = document.getElementById("restart-section");
+const messagesSection = document.getElementById('messages');
+
+// Html Elements - buttons
+const fireAttackButton = document.getElementById("fire-attack-button");
+const waterAttackButton = document.getElementById("water-attack-button");
+const earthAttackButton = document.getElementById("earth-attack-button");
+const petSelectionButton = document.getElementById("pet-selection-button");
+const restartButton = document.getElementById("restart-button");
+
 let playersAttack;
 let enemyAttack;
 let playerHealth = 3;
@@ -36,9 +52,6 @@ function enemyPetAttack() {
     enemyAttack = choices[numberChoice];
 }
 function showAndHideSections() {
-    let petSelectionSection = document.getElementById("pet-selection");
-    let attackSelectionSection = document.getElementById("attack-selection");
-
     petSelectionSection.style.display = 'none'
     attackSelectionSection.style.display = 'flex'
 }
@@ -64,11 +77,7 @@ function battleResult() {
     }
 }
 function messageCreator() {
-    let resultSection = document.getElementById('result');
-    let playersAttackSection = document.getElementById('player-attack');
-    let enemyAttackSection = document.getElementById('enemy-attack');
     let result = battleResult();
-
     let newEnemyAttack = document.createElement('p');
     let newPlayerAttack = document.createElement('p');
 
@@ -80,24 +89,17 @@ function messageCreator() {
     enemyAttackSection.appendChild(newEnemyAttack);
 }
 function gameOver() {
-    let restartSection = document.getElementById("restart-section");
-    let resultSection = document.getElementById('messages');
-
     if(enemyHealth == 0){
         alert('GAME OVER')
-        resultSection.innerHTML = 'GAME OVER, 🎉🎊TU GANAS🎊🎉'
+        messagesSection.innerHTML = 'GAME OVER, 🎉🎊TU GANAS🎊🎉'
         restartSection.style.display = "flex";
     }else if(playerHealth == 0){
         alert('GAME OVER')
-        resultSection.innerHTML = 'GAME OVER, 💀💀TU PIERDES💀💀'
+        messagesSection.innerHTML = 'GAME OVER, 💀💀TU PIERDES💀💀'
         restartSection.style.display = "flex";
     }
 }
 function disableButtons() {
-    let fireAttackButton = document.getElementById("fire-attack-button");
-    let waterAttackButton = document.getElementById("water-attack-button");
-    let earthAttackButton = document.getElementById("earth-attack-button");
-
     fireAttackButton.disabled = true
     waterAttackButton.disabled = true
     earthAttackButton.disabled = true
@@ -113,17 +115,8 @@ function attackButtonAction() {
     }
 }
 function starGame() {
-    let attackSelectionSection = document.getElementById("attack-selection");
-    let restartSection = document.getElementById("restart-section");
-
     attackSelectionSection.style.display = 'none';
     restartSection.style.display = 'none';
-
-    let petSelectionButton = document.getElementById("pet-selection-button");
-    let fireAttackButton = document.getElementById("fire-attack-button");
-    let waterAttackButton = document.getElementById("water-attack-button");
-    let earthAttackButton = document.getElementById("earth-attack-button");
-    let restartButton = document.getElementById("restart-button");
 
     petSelectionButton.addEventListener("click", function(){
         playersPetSelection(() => {
@@ -153,4 +146,3 @@ function starGame() {
 }
 
 window.addEventListener('load', starGame)
-
