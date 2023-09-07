@@ -1,4 +1,4 @@
-// import {mokepons} from "mokepon_factory.js";
+import {mokepons} from "./mokepon_factory.js";
 
 // Html Elements - sections
 const petSelectionSection = document.getElementById("pet-selection");
@@ -21,7 +21,8 @@ let enemyAttack;
 let playerHealth = 3;
 let enemyHealth = 3;
 
-// console.log(mokepons);
+console.log(mokepons);
+console.log(mokepons["capipepo"])
 
 function playersPetSelection(callback) {
     const pet = Array.from(document.querySelectorAll('input[name="pet"]')).find((pet) => pet.checked);
