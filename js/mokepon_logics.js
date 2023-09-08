@@ -2,6 +2,7 @@ import {mokepons} from "./mokepon_factory.js";
 
 // Html Elements - sections
 const petSelectionSection = document.getElementById("pet-selection");
+const petCardContainer = document.getElementById("pet-card-container");
 const attackSelectionSection = document.getElementById("attack-selection");
 const resultSection = document.getElementById('result');
 const playersAttackSection = document.getElementById('player-attack');
@@ -15,14 +16,13 @@ const waterAttackButton = document.getElementById("water-attack-button");
 const earthAttackButton = document.getElementById("earth-attack-button");
 const petSelectionButton = document.getElementById("pet-selection-button");
 const restartButton = document.getElementById("restart-button");
+const mokeponObjectKeys = Object.keys(mokepons);
 
 let playersAttack;
 let enemyAttack;
+let mokeponOptions = "";
 let playerHealth = 3;
 let enemyHealth = 3;
-
-console.log(mokepons);
-console.log(mokepons["capipepo"])
 
 function playersPetSelection(callback) {
     const pet = Array.from(document.querySelectorAll('input[name="pet"]')).find((pet) => pet.checked);
@@ -122,6 +122,23 @@ function attackButtonAction() {
 function starGame() {
     attackSelectionSection.style.display = 'none';
     restartSection.style.display = 'flex';
+
+    // Inserting all the mokepon information into the html document
+    mokeponObjectKeys.forEach(key => {
+        mokeponOptions += `
+        <div  class="pet-card">
+            <input type='radio' name='pet' id="${key}" />
+            <label class="pet-label" id="${key}-label" for="${key}">
+                <p>${mokepons[key].name}</p>
+                <img src="${mokepons[key].image}" alt="${key}" />
+            </label>
+        </div>
+        `
+    });
+
+    petCardContainer.innerHTML = mokeponOptions;
+
+    // Button actions
 
     petSelectionButton.addEventListener("click", function(){
         playersPetSelection(() => {
